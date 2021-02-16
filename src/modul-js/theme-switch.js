@@ -18,19 +18,19 @@ const cb = () => {
 
 export const btnSwitch = themeSwitch.addEventListener('change', cb); */
 
-const checkBox = document.querySelector( '.switch__input' );
+const checkBox = document.querySelector('#theme-switch-toggle');
 const body = document.querySelector( 'body' );
 const bodyTheme = {
     light: 'light-theme',
     dark: 'dark-theme'
-}
+};
 const currentTheme = localStorage.getItem( 'bodyTheme' );
 if( currentTheme ) {
     body.classList.add( currentTheme );
-}
+};
 if( currentTheme === bodyTheme.dark ) {
     checkBox.checked = true;
-}
+};
 
 checkBox.addEventListener( 'change', ( e ) => {
     if( e.target.checked ) {
